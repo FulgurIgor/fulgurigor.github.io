@@ -24,4 +24,4 @@ P <- ggplot(csv, aes(x=timestamp, y=votes, color=name)) +
   labs(x = "Время, EST", y = "Число голосов", color = "Имя участника")
 
 PP <- ggplotly(P)
-saveWidget(PP, file = '/home/ger/Proj/premia/git/index.html')
+saveWidget(PP, file = '/home/ger/Proj/premia/fulgurigor.github.io/index.html')
