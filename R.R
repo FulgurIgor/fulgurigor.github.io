@@ -25,5 +25,5 @@ P <- ggplot(csv, aes(x=timestamp, y=votes, color=name)) +
   labs(x = "Время, EST", y = "Число голосов", color = "Имя участника")
 
 PP <- ggplotly(P)
-saveWidget(PP, file = '/home/ger/Proj/premia/fulgurigor.github.io/index.html', selfcontained=T)
-saveWidget(PP, file = '/home/ger/Proj/premia/fulgurigor.github.io/separated.html', selfcontained=F)
+saveWidget(PP, file = '/home/ger/Proj/premia/fulgurigor.github.io/index.html', selfcontained=T, title="Премия Рунета 2018")
+saveWidget(PP, file = '/home/ger/Proj/premia/fulgurigor.github.io/separated.html', selfcontained=F, title="Премия Рунета 2018")
