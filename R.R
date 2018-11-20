@@ -12,6 +12,7 @@ data <- read.csv(unz(temp, "data.csv"), sep=";", header=T)
 unlink(temp)
 
 csv <- data %>%
+  filter(timestamp > 0) %>%
   filter(nomimation == 1) %>%
   select(name, timestamp, votes) %>%
   filter(votes > 100) %>%
