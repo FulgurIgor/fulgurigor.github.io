@@ -17,7 +17,7 @@ csv <- data %>%
   select(name, timestamp, votes) %>%
   filter(votes > 100) %>%
   mutate(name = str_sub(name, start = 1, end = 30)) %>%
-  mutate(timestamp = as.POSIXct(timestamp/10000000000, origin="1970-01-01"))
+  mutate(timestamp = as.POSIXct(timestamp/1000000000, origin="1970-01-01"))
 
 P <- ggplot(csv, aes(x=timestamp, y=votes, color=name)) +
   geom_line() +
