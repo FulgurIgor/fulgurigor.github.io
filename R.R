@@ -27,6 +27,6 @@ P <- ggplot(csv, aes(x=timestamp, y=votes, color=name)) +
   scale_x_datetime(labels = function(x) strftime(x, "%d/%m %H:%M"), date_breaks = "2 hour") +
   theme(axis.text.x=element_text(angle=60, hjust=1))
 PP <- ggplotly(P) %>%
-  layout(margin = list(l = 40, r = 0, b = 60, t = 0))
+  layout(margin = list(l = 20, r = 0, b = 40, t = 0))
 saveWidget(PP, file = '/home/ger/Proj/premia/fulgurigor.github.io/index.html', selfcontained=T, title="Премия Рунета 2018")
 saveWidget(PP, file = '/home/ger/Proj/premia/fulgurigor.github.io/separated.html', selfcontained=F, title="Премия Рунета 2018")
