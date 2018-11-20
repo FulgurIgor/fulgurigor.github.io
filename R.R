@@ -7,7 +7,7 @@ library(plotly)
 library(htmlwidgets)
 
 temp <- tempfile()
-download.file("https://github.com/oripio/premiya-runeta-data/blob/master/data.csv.zip?raw=true",temp)
+download.file("https://github.com/oripio/premiya-runeta-data/blob/master/data.csv.zip?raw=true", temp)
 data <- read.csv(unz(temp, "data.csv"), sep=";", header=T)
 unlink(temp)
 
@@ -24,4 +24,4 @@ P <- ggplot(csv, aes(x=timestamp, y=votes, color=name)) +
   labs(x = "Время, EST", y = "Число голосов", color = "Имя участника")
 
 PP <- ggplotly(P)
-saveWidget(PP, file = '/home/ger/Proj/premia/fulgurigor.github.io/index.html')
+saveWidget(PP, file = '/home/ger/Proj/premia/fulgurigor.github.io/index.html', selfcontained=T)
