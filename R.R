@@ -26,3 +26,4 @@ P <- ggplot(csv, aes(x=timestamp, y=votes, color=name)) +
 
 PP <- ggplotly(P)
 saveWidget(PP, file = '/home/ger/Proj/premia/fulgurigor.github.io/index.html', selfcontained=T)
+saveWidget(PP, file = '/home/ger/Proj/premia/fulgurigor.github.io/index2.html', selfcontained=F)
