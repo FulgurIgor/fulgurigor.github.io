@@ -17,7 +17,14 @@ csv <- data %>%
   select(name, timestamp, votes) %>%
   filter(votes > 100) %>%
   mutate(name = str_sub(name, start = 1, end = 30)) %>%
-  mutate(timestamp = as.POSIXct(timestamp, origin="1970-01-01"))
+  mutate(timestamp = as.POSIXct(timestamp, origin="1970-01-01")) %>%
+  group_by(name) %>%
+  mutate(lagv = lag(votes) == votes) %>%
+  mutate(leadv = lead(votes) == votes) %>%
+  mutate(tmp = lagv & leadv) %>%
+  mutate(tmp = ifelse(is.na(tmp), F, tmp)) %>%
+  filter(tmp == F) %>%
+  select(name, timestamp, votes)
 
 P <- ggplot(csv, aes(x=timestamp, y=votes, color=name)) +
   geom_line() +
