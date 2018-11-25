@@ -100,6 +100,6 @@ PP <- plot_ly() %>%
          title = "Число голосов",
     updatemenus = updatemenus)
   
-saveWidget(PP, file = '/home/ger/Proj/premia/fulgurigor.github.io/index.html', selfcontained=F, title="Премия Рунета 2018")
-saveWidget(PP, file = '/home/ger/Proj/premia/fulgurigor.github.io/separated.html', selfcontained=T, title="Премия Рунета 2018")
+saveWidget(PP, file = '/home/ger/Proj/premia/fulgurigor.github.io/index.html', selfcontained=T, title="Премия Рунета 2018")
+saveWidget(PP, file = '/home/ger/Proj/premia/fulgurigor.github.io/separated.html', selfcontained=F, title="Премия Рунета 2018")
 
