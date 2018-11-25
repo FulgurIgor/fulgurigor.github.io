@@ -63,7 +63,7 @@ updatemenus <- list(
     yanchor = "top",
     pad = list('r'= 0, 't'= 10, 'b' = 10),
     x = 0.6,
-    y = 1.37,
+    y = 1.07,
     buttons = list(
       list(method = "restyle",
            args = list("visible", list(F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,T,T,T,T,T,F,F,F,F,F)),
@@ -97,7 +97,6 @@ PP <- plot_ly() %>%
             type = "scatter", mode = 'lines', visible=F) %>%
   layout(xaxis = list(title = 'Время, MSK'),
          yaxis = list(title = 'Число голосов'),
-         title = "Число голосов",
     updatemenus = updatemenus)
   
 saveWidget(PP, file = '/home/ger/Proj/premia/fulgurigor.github.io/index.html', selfcontained=T, title="Премия Рунета 2018")
