@@ -50,9 +50,9 @@ valm5 <- votesAtLastMoment %>% group_by(name) %>%
   top_n(5) %>%
   select(name) %>% unlist()
 csv5 <- csv %>%
-  filter(name %in% c(valm))
+  filter(name %in% c(valm5))
 csvspeed5 <- csvspeed %>%
-  filter(name %in% c(valm))
+  filter(name %in% c(valm5))
 
 updatemenus <- list(
   list(
